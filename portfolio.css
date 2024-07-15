@@ -1,0 +1,363 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+#bar-chart {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+}
+
+
+#skills {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Header Styles */
+header {
+    background: #28a745;
+    color: #f8f5f5;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #292828 3px solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    animation: fadeInLeft 1s;
+    margin-left: 10px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    float:center;
+    
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 50px;
+    
+    
+}
+
+header nav ul li a {
+    color: #f7f1f1;
+    text-decoration: none;
+    padding: 5px 20px;
+    transition: background 0.5s, color 0.5s;
+}
+
+header nav ul li a:hover {
+    background: #f8f5f5;
+    color: #28a745;
+    border-radius: 5px;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 20px 20px; /* Adding top padding for fixed header */
+    border-bottom: 1px solid #ddd;
+    margin-left: 5px;
+    animation: fadeInUp 1s;
+    
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 10px;
+    
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center; /* Center align the content */
+    margin-top: 10px;
+}
+
+.about-img-container {
+    flex: 1;
+}
+
+.about-img {
+    width: 100%;
+     /* Fixed width for the image */
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.education-card {
+    padding: 10px;
+   
+    text-align: left;
+    
+}
+
+.education-card p {
+    font-size: 1em;
+    color: #666;
+    text-align: left;
+}
+
+
+.animated-text {
+    animation: fadeInText 2s ease-in-out;
+}
+
+.font1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.font2 {
+    font-family: 'Georgia', serif;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* Project Styles */
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center align the cards */
+}
+
+.project {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    flex: 1 1 calc(33% - 40px); /* Three cards per row */
+    max-width: calc(33% - 40px); /* Ensure cards do not exceed this width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Skills List Styles */
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 40px; /* Adjust height as needed */
+}
+
+.bar-fill {
+    background: #28a745;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: width 1s ease-in-out;
+    position: relative;
+    width: 0; /* Start at 0% width */
+}
+
+.bar-text {
+    position: absolute;
+    color: white;
+    z-index: 1;
+}
+
+.bar-label {
+    flex: 1;
+    padding: 0 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    background: #ddd;
+    position: relative;
+    z-index: 2;
+}
+
+.bar-fill.animate {
+    width: var(--bar-width);
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--bar-width);
+    }
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #28a745;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+ul li:hover {
+    background: #055cb0;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 20px;
+    
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0779e4;
+    transform: scale(1.2);
+}
+
+/* Action Buttons Styles */
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #055cb0;
+    transform: translateY(-3px);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
